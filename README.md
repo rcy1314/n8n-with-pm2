@@ -163,10 +163,25 @@ module.exports = {
         env: {
             N8N_BASIC_AUTH_ACTIVE:true,
             N8N_BASIC_AUTH_USER:"USERNAME",
-            N8N_BASIC_AUTH_PASSWORD:"PASSWORD"
+            N8N_BASIC_AUTH_PASSWORD:"PASSWORD",
+            N8N_PROTOCOL: "https",
+            WEBHOOK_TUNNEL_URL: "https://subdomain.example.com/",
+            N8N_HOST: "subdomain.example.com"
         }
     }]
 }
+```
+
+### SMTP Setup to Invite Users
+
+```
+export N8N_SMTP_PORT=587
+export N8N_SMTP_HOST=smtp.gmail.com
+export N8N_SMTP_USER=<youremail@gmail.com>
+export N8N_SMTP_PASS=<yourpassword>
+export N8N_SMTP_SENDER=<youremail@gmail.com>
+export N8N_EMAIL_MODE=smtp
+export N8N_EDITOR_BASE_URL=<subdomain.domain.com>
 ```
 
 Now, to start n8n, execute the command:
@@ -211,4 +226,3 @@ sudo ufw enable
 
 ## Test the webserver
 On your local machine, open a browser and navigate to `http://<public IP>` (replace the IP address with the one you copied earlier). You should see the default Nginx landing page "Welcome to NGINX! (...)"
-
