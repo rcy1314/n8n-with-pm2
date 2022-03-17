@@ -24,8 +24,8 @@ sudo apt install nginx
 
 Make sure NGINX is running:
 
-```
 # The below command should return `Active: active (running)` among other information.
+```
 sudo systemctl status nginx
 ```
 
