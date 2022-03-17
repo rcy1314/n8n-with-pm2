@@ -107,7 +107,7 @@ sudo npm install pm2 -g
 ### Install n8n globally with the following command:
 
 ```
-npm install n8n -g
+sudo npm install n8n -g
 ```
 Configure environment variable with [official document](https://docs.n8n.io/reference/environment-variables.html)
 
@@ -141,7 +141,7 @@ pm2 stop n8n
 2. Install the latest version of n8n
 
 ```
-npm install -g n8n@latest
+sudo npm install -g n8n@latest
 ```
 3. Restart the n8n service
 
