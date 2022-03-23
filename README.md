@@ -70,34 +70,6 @@ You should see an output ending with `nginx: configuration file /etc/nginx/nginx
 sudo systemctl reload nginx
 ```
 
-### Configure NGINX 2nd way (on official n8n-pm2 blog)
-
-First, start and enable Nginx by executing the following commands:
-
-```
-sudo systemctl start nginx
-sudo systemctl enable nginx
-```
-
-Next, create a configuration file by executing the command `sudo vi /etc/nginx/conf.d/n8n.conf`. Add the following configuration and save the file.
-
-Copy and paste below code:
-
-```
-server {
-    server_name subdomain.example.com;
-    location / {
-        proxy_pass http://localhost:5678;
-        proxy_http_version 1.1;
-        proxy_set_header Connection '';
-        proxy_set_header Host $host;
-        chunked_transfer_encoding off;
-        proxy_buffering off;
-        proxy_cache off;
-    }
-}
-```
-
 ### Install PM2 globally with the following command:
 
 ```
